@@ -64,26 +64,7 @@ export const Projects = () => {
       imgUrl: projImg6,
       urls: "https://github.com/rajesh-ss/MaskDetection"
     },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
+   
   ];
 
   return (
@@ -105,7 +86,7 @@ export const Projects = () => {
                       <Nav.Link  className = {classes.tabs} eventKey="second">web</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link className = {classes.tabs} eventKey="third">ml</Nav.Link>
+                      <Nav.Link className = {classes.tabs} eventKey="third">AI</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
