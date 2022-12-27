@@ -91,6 +91,9 @@ nav.navbar {
   z-index: 9999;
   transition:  0.32s ease-in-out;
 }
+nav.navbar h2{
+  color: #faf5f5;
+}
 nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
@@ -261,7 +264,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: block;
 }
 .banner p {
-  color: #B8B8B8;
+  color: #080707;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -425,7 +428,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 24px;
   height: 200px;
   width: 200px;
-  border: 2px solid rgb(165, 151, 151);
+  border: 1px solid  rgb(184, 172, 172);
+  padding: 0;
+  box-shadow: 2px 5px rgb(88, 79, 79);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 2;
+  
 }
 .proj-imgbx::before {
   content: "";
@@ -554,6 +564,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .newsletter-bx {
   background: #FFFFFF;
   border-radius: 55px;
@@ -623,4 +634,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+.footer h2{
+  color: #faf5f5;
 }

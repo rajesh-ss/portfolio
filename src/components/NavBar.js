@@ -12,8 +12,26 @@ import {
 
 export const NavBar = () => {
 
+
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
+
+
+      // Function will execute on click of button
+      const onButtonClick = () => {
+        // using Java Script method to get PDF file
+        fetch('Rajesh_resume.pdf').then(response => {
+            response.blob().then(blob => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'Rajesh_resume.pdf';
+                alink.click();
+            })
+        })
+    }
 
   useEffect(() => {
     const onScroll = () => {
@@ -38,7 +56,8 @@ export const NavBar = () => {
       <Navbar expand="md" className={scrolled ? "scrolled bg-secondary" : "bg-dark" }>
         <Container>
           <Navbar.Brand href="/">
-            <img src={logo} alt="Logo" />
+            {/* <img src={logo} alt="Logo" /> */}
+            <h2>Rajesh S</h2>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -55,9 +74,9 @@ export const NavBar = () => {
                 <a href="https://github.com/rajesh-ss"><img src={navIcon4} alt="" /></a>
         
               </div>
-              <HashLink to='#connect'>
-                <button className="vvd"><span>Let’s Connect</span></button>
-              </HashLink>
+              {/* <HashLink to='#connect'> */}
+                <button onClick={onButtonClick} className="vvd"><span>Resume</span></button>
+              {/* </HashLink> */}
             </span>
           </Navbar.Collapse>
         </Container>
